@@ -1,5 +1,5 @@
 {
-  "name": "@ubeswap/utility-contracts",
+  "name": "@ubeswap/celo-utility-contracts",
   "version": "0.1.0",
   "description": "Utility contracts for Celo development",
   "main": "index.js",

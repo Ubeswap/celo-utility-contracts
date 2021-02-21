@@ -1,6 +1,6 @@
-# @ubeswap/utility-contracts
+# @ubeswap/celo-utility-contracts
 
-Various deployed contracts for utility purposes. These contracts are deployed on Mainnet and Alfajores.
+Various deployed contracts on Celo for utility purposes. These contracts are deployed on Mainnet and Alfajores.
 
 These contracts are deployed using CREATE2, so the addresses are shared between chains.
 
