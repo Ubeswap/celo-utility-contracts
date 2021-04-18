@@ -7,22 +7,24 @@
   "author": "Ian Macalinao <ian@ubeswap.org>",
   "license": "MIT",
   "dependencies": {
-    "@ubeswap/solidity-create2-deployer": "^0.5.2",
+    "@celo/contracts": "^0.0.8",
+    "@ubeswap/solidity-create2-deployer": "^0.6.1",
     "solidity-create2-deployer": "^0.4.0"
   },
   "devDependencies": {
-    "@celo/contractkit": "^1.0.2",
-    "@types/node": "^14.14.31",
-    "@ubeswap/hardhat-celo": "^0.3.0",
+    "@celo/contractkit": "^1.1.0",
+    "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "@types/node": "^14.14.41",
+    "@ubeswap/hardhat-celo": "^0.8.0",
     "dotenv": "^8.2.0",
-    "hardhat": "^2.0.10",
-    "hardhat-abi-exporter": "^2.0.8",
+    "hardhat": "^2.2.0",
+    "hardhat-abi-exporter": "^2.2.0",
     "hardhat-spdx-license-identifier": "^2.0.3",
-    "husky": "=4",
+    "husky": "6.0.0",
     "lint-staged": ">=10",
     "prettier": "^2.2.1",
     "ts-node": "^9.1.1",
-    "typescript": "^4.1.5"
+    "typescript": "^4.2.4"
   },
   "husky": {
     "hooks": {

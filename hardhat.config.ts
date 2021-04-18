@@ -5,11 +5,21 @@ import "hardhat-abi-exporter";
 import "hardhat-spdx-license-identifier";
 import { HardhatUserConfig, task } from "hardhat/config";
 import { HDAccountsUserConfig } from "hardhat/types";
-import { deployCreate2 } from "./tasks/deploy-create2";
-import { deployMulticall } from "./tasks/deploy-multicall";
 
-task("deploy-create2", "Deploys the CREATE2 deployer.", deployCreate2);
-task("deploy-multicall", "Deploys Multicall.", deployMulticall);
+task("deploy-create2", "Deploys the CREATE2 deployer.", async (...args) => {
+  return (await import("./tasks/deploy-create2").then((f) => f.deployCreate2))(
+    // @ts-ignore
+    ...args
+  );
+});
+task("deploy-multicall", "Deploys Multicall.", async (...args) => {
+  return (
+    await import("./tasks/deploy-multicall").then((f) => f.deployMulticall)
+  )(
+    // @ts-ignore
+    ...args
+  );
+});
 
 const accounts: HDAccountsUserConfig = {
   mnemonic:
@@ -63,6 +73,18 @@ export default {
       optimizer: {
         enabled: true,
         runs: 5000,
+      },
+      outputSelection: {
+        "*": {
+          "*": [
+            "abi",
+            "evm.bytecode",
+            "evm.deployedBytecode",
+            "evm.methodIdentifiers",
+            "metadata",
+          ],
+          "": ["ast"],
+        },
       },
     },
   },
